@@ -1,0 +1,322 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.admin-image
+{
+    max-width: 400px;
+}
+
+.index-image
+{
+    display: block;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.menu span
+{
+    height: 4px;
+    width: 26px;
+    background-color: white;
+    display: block;
+    position: absolute;
+    top: 0;
+    transition: 400ms ease-in-out;
+}
+
+.menu span:nth-child(1)
+{
+    top: 8px;
+}
+.menu span:nth-child(2)
+{
+    top: 16px;
+}
+.menu span:nth-child(3)
+{
+    top: 24px;
+}
+
+.menu
+{
+    position: fixed;
+    top: 40px;
+    left: 100px;
+    z-index: 1000;
+    cursor: pointer;
+    display: inline-block;
+    width: 50px;
+    height: 40px;
+    padding: 10px;
+}
+
+.opened span
+{
+    width: 30px;
+}
+
+.opened span:nth-child(2)
+{
+    display: none;
+}
+
+.opened span:nth-child(1)
+{
+    transform: rotate(45deg) translateY(275%);
+}
+.opened span:nth-child(3)
+{
+    transform: rotate(-45deg) translateY(-275%);
+}
+
+.nav-menu
+{
+    height: 100vh;
+    width: 260px;
+    left: -260px;
+    z-index: 500;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: 500ms ease;
+}
+
+.open
+{
+    left: 0;
+}
+
+.nav-menu li
+{
+    list-style: none;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+
+.nav-menu ul
+{
+    position: absolute;
+    top: 125px;
+    left: 40px;
+}
+
+.nav-menu li a 
+{
+    transition: 400ms ease;
+}
+
+.nav-menu li a:hover
+{
+    color: white;
+    padding-left: 15px;
+    color: #ccc;
+}
+
+.login
+{
+    position: absolute;
+    bottom: 80px;
+    left: 40px;
+    display: inline-block;
+}
+
+.login a
+{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    transition: 400ms ease;
+}
+
+.login a:hover
+{
+    color: #ccc;
+}
+
+.arrow
+{
+    position: absolute;
+    bottom: 80px;
+    right: 50px;
+    animation: up-down 1s infinite;
+}
+
+.arrow i
+{
+    color: white;
+    font-size: 40px;
+}
+
+@keyframes up-down
+{
+    0%
+    {
+        bottom: 80px;
+    }
+    75%
+    {
+        bottom: 50px;
+    }
+    100%
+    {
+        bottom: 80px;
+    }
+}
+
+
+
+
+/*                 */
+/*     CATEGORY    */
+/*                 */
+
+.images-flex
+{
+    display: flex;
+    width: 100%;
+    justify-content: stretch;
+    flex-wrap: wrap;
+}
+
+.category-image
+{
+    background-position: center;
+    background-size: cover;
+    width: calc(100% / 3);
+    height: 20vw;
+    transition: 700ms ease;
+}
+
+.category-image:hover
+{
+    cursor: pointer;
+}
+
+.image-bigger
+{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: black;
+    overflow: visible!important;
+    height: 200vh;
+}
+
+.image-bigger img
+{
+    height: 100vh;
+    width: auto;
+    margin: auto;
+    display: block;
+}
+
+.category-header
+{
+    background-color: rgba(0, 0, 0, 0.9);
+    height: 150px;
+    width: 100%;
+}
+
+.category-header h1
+{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 600;
+    line-height: 100px;
+}
+
+.category-header ul li
+{
+    display: inline-block;
+    list-style: none;
+    color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    font-weight: 500;
+}
+
+.category-header ul
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.category-header ul li:hover
+{
+    cursor: pointer;
+}
+
+.w-0
+{
+    width: 0;
+}
+
+.h-0
+{
+    height: 0;
+}
+
+.active::after
+{
+    content: "";
+    height: 2px;
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.next
+{
+    position: absolute;
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.left
+{
+    left: 50px;
+    top: 50vh;
+    transform: translateY(-50%);
+}
+
+.right
+{
+    right: 50px;
+    top: 50vh;
+    transform: translateY(-50%);
+}
+
+.logo
+{
+    position: fixed;
+    color: white;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 900;
+    font-size: 32px;
+    top: 20px;
+    right: 20px;
+    text-align: center;
+    line-height: 28px;
+}
+
+.vertical-align
+{
+    vertical-align: middle;
+    display: inline-block;
+}
